@@ -10,15 +10,17 @@ class Cp extends Command
 {
     protected $signature = 'cp:install';
     protected $description = 'Install & Publish Dashboard';
-    private $app;
 
-    public function __construct($app)
+    public function __construct()
     {
-        $this->app = $app;
+        parent::__construct();
     }
 
     public function handle() {
         $dashboard = config('dashboard.dashboard');
-        (new \Liteas98\Cp\CpInstallServiceProvider)->boot($dashboard);
+        return new CpInstallServiceProvider($dashboard);
+//        if ($dashboard == 'vuexy'){
+//            \File::copy(__DIR__ . '/../environment/config/filesystems.php', base_path('config/filesystems.php'));
+//        }
     }
 }
