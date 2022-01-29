@@ -18,6 +18,7 @@ class Cp extends Command
 
     public function handle() {
         $dashboard = config('dashboard.dashboard');
-        return new CpInstallServiceProvider($dashboard);
+        echo $dashboard;
+//        return new CpInstallServiceProvider($dashboard);
     }
 }
