@@ -19,16 +19,16 @@ class CreateModel
 
     public function __construct($model)
     {
-        $this->name = $model->name;
-        $this->table_name = $model->table_name;
-        $this->primary_key = $model->primary_key ?: null;
-        $this->incrementing = $model->incrementing ?: null;
-        $this->key_type = $model->key_type ?: null;
-        $this->timestamps = $model->timestamps ?: null;
-        $this->date_format = $model->date_format ?: null;
-        $this->auth = $model->auth ?: null;
-        $this->has_slug = $model->has_slug ?: null;
-        $this->notifiable = $model->notifiable ?: null;
+        $this->name = $model['name'];
+        $this->table_name = $model['table_name'];
+        $this->primary_key = $model['primary_key'] ?: null;
+        $this->incrementing = $model['incrementing'] ?: null;
+        $this->key_type = $model['key_type'] ?: null;
+        $this->timestamps = $model['timestamps'] ?: null;
+        $this->date_format = $model['date_format'] ?: null;
+        $this->auth = $model['auth'] ?: null;
+        $this->has_slug = $model['has_slug'] ?: null;
+        $this->notifiable = $model['notifiable'] ?: null;
     }
 
     public function create(){
