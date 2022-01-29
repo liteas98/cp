@@ -1,0 +1,22 @@
+{
+    "name": "liteas98/cp",
+    "description": "Unleash your imagination and be creative",
+    "type": "package",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Liteas98\\Cp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mostafa Eid",
+            "email": "lost.mostafa92@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
