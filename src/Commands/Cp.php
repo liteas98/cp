@@ -18,10 +18,10 @@ class Cp extends Command
     public function handle() {
         $dashboard = $this->argument('dashboard');
         if ($dashboard == 'vuexy'){
-            $this->publishes(['../dashboard/vuexy/app' => base_path('app')]);
-            $this->publishes(['../dashboard/vuexy/public' => base_path('public')]);
-            $this->publishes(['../dashboard/vuexy/resources' => base_path('resources')]);
-            $this->publishes(['../dashboard/vuexy/routes' => base_path('routes')]);
+            $this->publishes([__DIR__ . '/../dashboard/vuexy/app' => base_path('app')]);
+            $this->publishes([__DIR__ . '/../dashboard/vuexy/public' => base_path('public')]);
+            $this->publishes([__DIR__ . '/../dashboard/vuexy/resources' => base_path('resources')]);
+            $this->publishes([__DIR__ . '/../dashboard/vuexy/routes' => base_path('routes')]);
         }
     }
 }
