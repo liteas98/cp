@@ -18,7 +18,6 @@ class Cp extends Command
 
     public function handle() {
         $dashboard = config('dashboard.dashboard');
-        echo $dashboard;
-//        return new CpInstallServiceProvider($dashboard);
+        (new \Liteas98\Cp\CpInstallServiceProvider)->boot($dashboard);
     }
 }
