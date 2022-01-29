@@ -17,10 +17,6 @@ class CpServiceProvider extends ServiceProvider
         $this->app->singleton('command.cp.install', function ($app) {
             return new Cp();
         });
-
-        $this->commands([
-            Cp::class
-        ]);
     }
 
     public function provides() {
@@ -36,6 +32,8 @@ class CpServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        $this->commands([
+            Cp::class
+        ]);
     }
 }
