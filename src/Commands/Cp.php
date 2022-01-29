@@ -17,6 +17,9 @@ class Cp extends Command
     }
 
     public function handle() {
-        Artisan::call('vendor:publish --tag=cp-dashboard-publishes');
+        $dashboard = config('dashboard.dashboard');
+        if ($dashboard == 'vuexy'){
+            shell_exec('php artisan vendor:publish --tag=cp-dashboard-publishes-vuexy');
+        }
     }
 }
