@@ -35,5 +35,9 @@ class CpServiceProvider extends ServiceProvider
         $this->commands([
             Cp::class
         ]);
+
+        $this->publishes([
+            __DIR__.'/config/dashboard.php' => config_path('dashboard.php')
+        ], 'cp-config');
     }
 }
