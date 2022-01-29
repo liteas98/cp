@@ -11,10 +11,10 @@ class Cp extends Command
     protected $signature = 'cp:install';
     protected $description = 'Install & Publish Dashboard';
 
-    public function __construct()
-    {
-        parent::__construct();
-    }
+//    public function __construct($app)
+//    {
+//        $this->app = $app;
+//    }
 
     public function handle() {
         $dashboard = config('dashboard.dashboard');
