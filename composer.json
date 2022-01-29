@@ -9,7 +9,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Liteas98\\Cp\\": "src/"
+            "Liteas98\\Cp\\": "src/",
+            "Liteas98\\Cp\\Commands": "Commands/"
         }
     },
     "authors": [

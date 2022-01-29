@@ -15,7 +15,7 @@ class CpServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('command.cp.install', function ($app) {
-            return new Cp;
+            return new Cp();
         });
 
         $this->commands([
