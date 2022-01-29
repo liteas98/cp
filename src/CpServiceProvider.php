@@ -3,6 +3,7 @@
 namespace Liteas98\Cp;
 
 use Illuminate\Support\ServiceProvider;
+use Liteas98\Cp\Commands\Cp;
 
 class CpServiceProvider extends ServiceProvider
 {
@@ -14,11 +15,11 @@ class CpServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('command.cp.install', function ($app) {
-            return new Commands\Cp;
+            return new Cp;
         });
 
         $this->commands([
-            Commands\Cp::class
+            Cp::class
         ]);
     }
 
