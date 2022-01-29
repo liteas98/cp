@@ -17,10 +17,6 @@ class Cp extends Command
     }
 
     public function handle() {
-        $dashboard = config('dashboard.dashboard');
-        return new CpInstallServiceProvider($dashboard);
-//        if ($dashboard == 'vuexy'){
-//            \File::copy(__DIR__ . '/../environment/config/filesystems.php', base_path('config/filesystems.php'));
-//        }
+        Artisan::call('vendor:publish --tag=cp-dashboard-publishes');
     }
 }
