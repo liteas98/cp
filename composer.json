@@ -18,5 +18,12 @@
             "email": "lost.mostafa92@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Liteas98\\Cp\\CpServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev"
 }
